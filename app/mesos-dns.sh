@@ -1,10 +1,10 @@
 #/bin/sh
 
-if [ $# -eq 0 ]; then
-    echo "No parameter was given - using existing config.json file."
+if [ -z "$CONFIG" ]; then
+    echo "No CONFIG variable was given. Using existing config.json file."
 else
-    echo "Overriding config.json with given parameters."
-    echo $1 > ./config.json
+    echo "Overriding config.json with given parameter."
+    echo $CONFIG > ./config.json
 fi
 
 echo "Starting mesos-dns with the following configuration:"
