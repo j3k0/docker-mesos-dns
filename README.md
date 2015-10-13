@@ -1,9 +1,12 @@
 # docker-mesos-dns
+
 A lightweight Mesos-DNS Docker image using the official release.
+
+Configuration can be given either from a file or on 'docker run'. See usage below.
 
 ## Usage
 
-### Configuration in a file:
+### Configuration from a file:
 
 `docker run -d --name mesos-dns --net host -v /path-to-some-config.json:/config.json argussecurity/mesos-dns`
 
